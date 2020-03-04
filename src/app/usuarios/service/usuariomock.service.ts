@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IUsuarioService } from './iusuario.service';
-import { Usuario } from '../models/usuarioDTO.entity';
+import { UsuarioDTO } from '../models/usuarioDTO.entity';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,10 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class UsuarioMockService implements IUsuarioService {
 
-    usuarios: Usuario[] = [
-        new Usuario(1, "Gustavo Maciel", "gustavo@mail.com"),
-        new Usuario(2, "Vinnicius", "vinnicius@mail.com"),
+    usuarios: UsuarioDTO[] = [
+        new UsuarioDTO(1, "Gustavo Maciel", "gustavo@mail.com"),
+        new UsuarioDTO(2, "Vinnicius", "vinnicius@mail.com"),
     ]
+
+    lastId: number = 2;
 
     list(): Observable<any> {
         return new Observable<any>(
@@ -25,10 +27,17 @@ export class UsuarioMockService implements IUsuarioService {
         throw new Error("Method not implemented.");
     }
     insert(usuario: any): Observable<any> {
-        throw new Error("Method not implemented.");
+        this.usuarios.push(usuario);
+        usuario.id = ++this.lastId;
+        return new Observable<any> (
+            (obs) => {
+                obs.next(usuario);
+                obs.complete();
+            }
+        );
     }
     delete(id: number): Observable<any> {
-        const aux: Usuario[] = []
+        const aux: UsuarioDTO[] = []
         this.usuarios.forEach((user) => {
             if(user.id != id) {
                 aux.push(user);

@@ -6,6 +6,7 @@ import { UsuariosListComponent } from './usuarios-list/usuarios-list.component';
 import { UsuarioService } from './service/usuario.service';
 import { UsuarioMockService } from './service/usuariomock.service';
 import { UsuarioCreateComponent } from './usuario-create/usuario-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,8 @@ import { UsuarioCreateComponent } from './usuario-create/usuario-create.componen
   imports: [
     CommonModule,
     UsuariosRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
       {

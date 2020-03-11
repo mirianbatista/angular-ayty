@@ -11,7 +11,11 @@ const routes: Routes = [
     {
         path: 'usuarios',
         loadChildren: './usuarios/usuarios.module#UsuariosModule',
-    }
+    },
+    {
+        path: 'empresas',
+        loadChildren: './empresas/empresas.module#EmpresasModule',
+    },
 ];
 
 @NgModule({

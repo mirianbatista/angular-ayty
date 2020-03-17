@@ -33,6 +33,18 @@ export class UsuarioMockService implements IUsuarioService {
             obs.complete();
         });
     }
+    update(usuario: UsuarioDTO): Observable<any> {
+        let oldUser = this.usuarios
+        .filter(user => user.id == usuario.id)
+        .pop();
+
+        Object.assign(oldUser, usuario);
+
+        return new Observable<any>((obs) => {
+            obs.next(usuario);
+            obs.complete();
+        });
+    }
 
 
     insert(usuario: any): Observable<any> {

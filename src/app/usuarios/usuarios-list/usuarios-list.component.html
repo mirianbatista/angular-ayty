@@ -23,7 +23,9 @@
                     <td> {{ user.name }} </td>
                     <td> {{ user.email }} </td>
                     <td>
-                        <button (click)="delete(user.id)" href="#"> Deletar </button>
+                        <button class="btn btn-primary mr-2" (click)="view(user.id)">Visualizar</button>
+                        <button class="btn btn-dark mr-2" (click)="edit(user.id)">Editar</button>
+                        <button class="btn btn-danger" (click)="delete(user.id)" href="#"> Deletar </button>
                     </td>
                 </tr>
             </tbody>

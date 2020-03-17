@@ -8,11 +8,12 @@ import { UsuarioMockService } from './service/usuariomock.service';
 import { UsuarioCreateComponent } from './usuario-create/usuario-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuariosViewComponent } from './usuarios-view/usuarios-view.component';
+import { UsuariosEditComponent } from './usuarios-edit/usuarios-edit.component';
 
 
 
 @NgModule({
-  declarations: [UsuariosComponent, UsuariosListComponent, UsuarioCreateComponent, UsuariosViewComponent],
+  declarations: [UsuariosComponent, UsuariosListComponent, UsuarioCreateComponent, UsuariosViewComponent, UsuariosEditComponent],
   imports: [
     CommonModule,
     UsuariosRoutingModule,

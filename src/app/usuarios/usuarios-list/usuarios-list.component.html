@@ -1,14 +1,11 @@
 <div class="container">
-    
-    <div class="my-3 float-right"><a class="btn btn-primary" routerLink="/usuarios/create">CREATE</a></div>
+    <div class="my-3 float-right"><span class="material-icons" routerLink="/usuarios/create">add_circle</span></div>
 
     <div *ngIf="loading else ListUsers">Loading...</div>
 
-
-
     <ng-template #ListUsers>
         <table class="table table-bordered table-hover table-striped">
-            <thead class="thead-dark">
+            <thead class="thead-light">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
@@ -23,9 +20,9 @@
                     <td> {{ user.name }} </td>
                     <td> {{ user.email }} </td>
                     <td>
-                        <button class="btn btn-primary mr-2" (click)="view(user.id)">Visualizar</button>
-                        <button class="btn btn-dark mr-2" (click)="edit(user.id)">Editar</button>
-                        <button class="btn btn-danger" (click)="delete(user.id)" href="#"> Deletar </button>
+                        <span class="material-icons" (click)="view(user.id)">visibility</span>
+                        <span class="material-icons" (click)="edit(user.id)">edit</span>
+                        <span class="material-icons" (click)="delete(user.id)">delete</span>
                     </td>
                 </tr>
             </tbody>

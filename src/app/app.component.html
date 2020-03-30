@@ -4,13 +4,29 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    
+    <div class="collapse navbar-collapse" id="navbarNav"> 
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/usuarios']" routerLInkActive="active">Users</a>
+                <a class="nav-link" [routerLink]="['/usuarios']" routerLInkActive="active">Usuários</a>
             </li>
         </ul>
     </div>
 </nav>
+
+<style>
+    .button-home {
+        margin: 15px;
+        margin-top: 60px;
+        padding: 40px;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <button type="button" class="btn btn-outline-dark button-home" [routerLink]="['/usuarios']" routerLInkActive="active">Usuários</button>
+        <button type="button" class="btn btn-outline-dark button-home" [routerLink]="['/empresas']" routerLInkActive="active">Empresas</button>
+    </div>
+</div> 
 
 <router-outlet></router-outlet>

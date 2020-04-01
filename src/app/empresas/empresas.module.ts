@@ -4,6 +4,7 @@ import { EmpresaListComponent } from './empresa-list/empresa-list.component';
 import { RouterModule } from '@angular/router';
 import { EmpresasRoutingModule } from './empresa-routing.module';
 import { EmpresaCreateComponent } from './empresa-create/empresa-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,6 +13,8 @@ import { EmpresaCreateComponent } from './empresa-create/empresa-create.componen
   imports: [
     CommonModule,
     EmpresasRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class EmpresasModule { }

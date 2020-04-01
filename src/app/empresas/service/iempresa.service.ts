@@ -5,6 +5,6 @@ export interface IEmpresaService {
     list(): Observable<any>;
     getById(id: number): Observable<any>;
     insert(empresa: any): Observable<any>;
-    //delete(id: number): Observable<any>;
-    //update(empresa: EmpresaDTO): Observable<any>;
+    delete(id: number): Observable<any>;
+    update(empresa: EmpresaDTO): Observable<any>;
 }

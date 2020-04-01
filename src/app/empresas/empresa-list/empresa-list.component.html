@@ -1,1 +1,39 @@
-<p>empresa-list works!</p>
+<div class="container">
+    <div class="my-3 float-right"><span class="material-icons" routerLink="/empresas/create">add_circle</span></div>
+
+    <div *ngIf="loading else ListEmpresas">Loading...</div>
+
+    <ng-template #ListEmpresas>
+        <table class="table table-bordered table-hover table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>CNPJ</th>
+                    <th>Nome Fantasia</th>
+                    <th>Razão Social</th>
+                    <th>Missão</th>
+                    <th>Visão</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let empresa of empresas">
+                    <td> {{ empresa.id }} </td>
+                    <td> {{ empresa.cnpj }} </td>
+                    <td> {{ empresa.nome_fant }} </td>
+                    <td> {{ empresa.razao_social }} </td>
+                    <td> {{ empresa.missao }} </td>
+                    <td> {{ empresa.visao }} </td>
+                    <td>
+                        <span class="material-icons" (click)="view(empresa.id)">visibility</span>
+                        <span class="material-icons" (click)="edit(empresa.id)">edit</span>
+                        <span class="material-icons" (click)="delete(empresa.id)">delete</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-template>
+
+
+</div>

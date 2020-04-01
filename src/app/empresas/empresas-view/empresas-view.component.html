@@ -1,0 +1,23 @@
+<div class="container" *ngIf="!isLoading else loadingIcon">
+    <div class="row">
+        <div class="col-md-6 img">
+            <img src="https://cdn.onlinewebfonts.com/svg/img_184513.png"
+                alt="" class="img-rounded" width="200px">
+        </div>
+        <div class="col-md-6 details">
+            <blockquote>
+                <h3>{{ empresa.nome_fant }}</h3>
+                <small><cite title="Source Title">{{ empresa.cnpj }}<i
+                            class="icon-map-marker"></i></cite></small>
+            </blockquote>
+            <p>
+                {{ empresa.razao_social }} <br>
+                Missão: {{ empresa.missao }} <br>
+                Visão: {{ empresa.visao }}
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #loadingIcon></ng-template>

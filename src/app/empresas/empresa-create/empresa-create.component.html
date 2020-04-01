@@ -43,11 +43,18 @@
                             <div *ngIf="form.visao.errors.required">coloque a visão</div>
                         </div>
                 </div> 
+
+                <!-- <mat-form-field>
+                    <mat-label>Funcionários</mat-label>
+                    <mat-select [formControl]="funcionarios" multiple>
+                      <mat-option *ngFor="let funcionario of funcionarios" [value]="funcionarios">{{empresa.funcionarios}}</mat-option>
+                    </mat-select>
+                </mat-form-field> -->
                                 
             </div>
     
             <div class="text-center">
-                <button class="btn btn-primary mr-1" type="button" (click)="onSubmit()">Adicionar</button>
+                <button class="btn btn-dark mr-1" type="button" (click)="onSubmit()">Adicionar</button>
                 <button *ngIf="!isEditing" class="btn btn-secondary" type="reset" (click)="onReset()">Resetar</button>
             </div>
     

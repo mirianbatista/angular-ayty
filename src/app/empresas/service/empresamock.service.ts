@@ -10,8 +10,8 @@ import { UsuarioDTO } from 'src/app/usuarios/models/usuarioDTO.entity';
 export class EmpresamockService implements IEmpresaService {
 
   empresas: EmpresaDTO[] = [
-    new EmpresaDTO(1, "01234567890000", "Zero", "Empresa Número Zero", "Contribuir para redução das desigualdades sociais do país.", "Qualificar pessoas pobres.", [new UsuarioDTO(1, "Gustavo Maciel", "gustavo@mail.com")]),
-    new EmpresaDTO(2, "01234567890000", "Quarenta e Dois", "Empresa Número Quarenta e Dois", "Contribuir para redução das desigualdades sociais do país.", "Qualificar pessoas pobres.", [new UsuarioDTO(2, "Vinnicius", "vinnicius@mail.com")]),
+    new EmpresaDTO(1, "01.234.567/8900-00", "Zero", "Empresa Número Zero", "Contribuir para redução das desigualdades sociais do país.", "Qualificar pessoas pobres.", [new UsuarioDTO(1, "Gustavo Maciel", "gustavo@mail.com")]),
+    new EmpresaDTO(2, "01.234.567/8900-00", "Quarenta e Dois", "Empresa Número Quarenta e Dois", "Contribuir para redução das desigualdades sociais do país.", "Qualificar pessoas pobres.", [new UsuarioDTO(2, "Vinnicius", "vinnicius@mail.com")]),
 ]
 
   lastId: number = 2;

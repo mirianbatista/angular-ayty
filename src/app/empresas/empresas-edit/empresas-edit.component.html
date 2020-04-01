@@ -1,0 +1,54 @@
+
+<div class="container">
+    <form class="form" [formGroup]="formGroup">
+
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label><strong>Nome Fantasia</strong></label>
+                <input type="text" formControlName="nome_fant" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && form.nome_fant.errors }" />
+                <div *ngIf="submitted && form.nome_fant.errors" class="invalid-feedback">
+                    <div *ngIf="form.nome_fant.errors.required">coloque o nome</div>
+                </div>
+            </div>
+            <div class="form-group col-12">
+                    <label><strong>Razão Social</strong></label>
+                    <input type="text" formControlName="razao_social" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.razao_social.errors }" />
+                    <div *ngIf="submitted && form.razao_social.errors" class="invalid-feedback">
+                        <div *ngIf="form.razao_social.errors.required">coloque a razão social</div>
+                    </div>
+            </div>
+            <div class="form-group col-12">
+                    <label><strong>CNPJ</strong></label>
+                    <input type="text" formControlName="cnpj" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.cnpj.errors }" />
+                    <div *ngIf="submitted && form.cnpj.errors" class="invalid-feedback">
+                        <div *ngIf="form.cnpj.errors.required">coloque o cnpj</div>
+                    </div>
+            </div>
+            <div class="form-group col-12">
+                    <label><strong>Missão</strong></label>
+                    <input type="text" formControlName="missao" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.missao.errors }" />
+                    <div *ngIf="submitted && form.missao.errors" class="invalid-feedback">
+                        <div *ngIf="form.missao.errors.required">coloque a missão</div>
+                    </div>
+            </div>
+            <div class="form-group col-12">
+                    <label><strong>Visão</strong></label>
+                    <input type="text" formControlName="visao" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && form.visao.errors }" />
+                    <div *ngIf="submitted && form.visao.errors" class="invalid-feedback">
+                        <div *ngIf="form.visao.errors.required">coloque a visão</div>
+                    </div>
+            </div> 
+                            
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-dark mr-1" type="button" (click)="onSubmit()">Atualizar</button>
+        </div>
+
+    </form>
+</div>

@@ -43,11 +43,11 @@ export class EmpresaListComponent implements OnInit {
     }
 
     view(id: number) {
-        this.router.navigate(["usuarios", "view", id]);
+        this.router.navigate(["empresas", "view", id]);
     }
 
     edit(id: number) {
-        this.router.navigate(["usuarios", "edit", id]);
+        this.router.navigate(["empresas", "edit", id]);
     }
 
 }

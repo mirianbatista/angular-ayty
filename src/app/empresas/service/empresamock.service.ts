@@ -47,15 +47,15 @@ export class EmpresamockService implements IEmpresaService {
     );
   }
 
-  update(empresa: EmpresaDTO): Observable<any> {
+  update(empresaToUpdate: EmpresaDTO): Observable<any> { 
     let oldEmpresa = this.empresas
-    .filter(empresa => empresa.id == empresa.id)
-    .pop();
-
-    Object.assign(oldEmpresa, empresa);
+    .filter(empresa => empresa.id === empresaToUpdate.id) 
+    .pop();                                       
+    
+    Object.assign(oldEmpresa, empresaToUpdate);
 
     return new Observable<any>((obs) => {
-        obs.next(empresa);
+        obs.next(empresaToUpdate);
         obs.complete();
     });
   }

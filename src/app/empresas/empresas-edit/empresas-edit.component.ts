@@ -3,12 +3,12 @@ import { EmpresamockService } from '../service/empresamock.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmpresaDTO } from '../models/empresaDTO.entity';
-
+ 
 @Component({
   selector: 'app-empresas-edit',
   templateUrl: './empresas-edit.component.html',
   styleUrls: ['./empresas-edit.component.css']
-})
+}) 
 export class EmpresasEditComponent implements OnInit {
 
     private formGroup: FormGroup;
